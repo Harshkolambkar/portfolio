@@ -1,0 +1,254 @@
+*{
+		margin:0px;
+		padding:0px;
+	}
+	#home{
+		height:100%;
+		width:auto;
+		background-color:;
+	}
+	.center-container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100vh; /* Adjust the height as needed */
+	}
+	.highlight-row {
+		padding: 20px;
+		opacity: 0;
+	 }
+
+	.highlight-row .fade-in-right {
+		animation: fade-in-right 4s forwards;
+	}
+
+	  
+
+	  @keyframes fade-in-right {
+		0% {
+		  opacity: 0;
+		  transform: translateX(100%);
+		}
+		100% {
+		  opacity: 1;
+		  transform: translateX(0);
+		}
+	  }
+	  
+	 .blob {
+		display: block;
+		position: relative;
+		width: 200px;
+		height: 200px;
+		overflow: hidden;
+		border-radius: 48% 52% 68% 32% / 42% 28% 72% 58%;
+		background: ;
+		background-size: 500% 100%;
+		animation: blobber 30s 0s linear infinite, cobler 30s 0s linear infinite alternate;
+	}
+
+	.blob:after {
+		content: '';
+		display: block;
+		position: absolute;
+		top: 5px;
+		right: 5px;
+		bottom: 5px;
+		left: 5px;
+		background-color:;
+		background-image: url(images/profile.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		mix-blend-mode: multiply;
+		animation: blobber 30s 0s ease-in-out infinite, wobbler 15s 0s linear infinite alternate;
+	}
+
+	@keyframes blobber {
+		0% { border-radius: 48% 52% 68% 32% / 42% 28% 72% 58%; }
+		5% { border-radius: 48% 52% 41% 59% / 66% 37% 63% 34%; }
+		10% { border-radius: 69% 31% 71% 29% / 67% 31% 69% 33%; }
+		15% { border-radius: 60% 40% 71% 29% / 63% 65% 35% 37%; }
+		20% { border-radius: 61% 39% 51% 49% / 57% 58% 42% 43%; }
+		25% { border-radius: 66% 34% 25% 75% / 47% 30% 70% 53%; }
+		30% { border-radius: 32% 68% 38% 62% / 65% 60% 40% 35%; }
+		35% { border-radius: 63% 37% 41% 59% / 35% 38% 62% 65%; }
+		40% { border-radius: 57% 43% 49% 51% / 55% 71% 29% 45%; }
+		45% { border-radius: 47% 53% 34% 66% / 65% 36% 64% 35%; }
+		50% { border-radius: 44% 56% 32% 68% / 69% 26% 74% 31%; }
+		55% { border-radius: 28% 72% 37% 63% / 71% 44% 56% 29%; }
+		60% { border-radius: 38% 62% 35% 65% / 74% 53% 47% 26%; }
+		65% { border-radius: 73% 27% 46% 54% / 54% 47% 53% 46%; }
+		70% { border-radius: 75% 25% 47% 53% / 49% 53% 47% 51%; }
+		75% { border-radius: 62% 38% 43% 57% / 55% 60% 40% 45%; }
+		80% { border-radius: 41% 59% 65% 35% / 73% 50% 50% 27%; }
+		85% { border-radius: 55% 45% 57% 43% / 73% 61% 39% 27%; }
+		90% { border-radius: 74% 26% 33% 67% / 40% 65% 35% 60%; }
+		95% { border-radius: 58% 42% 57% 43% / 53% 45% 55% 47%; }
+		100% { border-radius: 48% 52% 68% 32% / 42% 28% 72% 58%; }
+	}
+
+	@keyframes cobler {
+		0% { background-position: 0% 0%; }
+		100% { background-position: 100% 0%; }
+	}
+
+	@keyframes wobbler {
+		0% { transform: rotateZ(8deg); }
+		100% { transform: rotateZ(-8deg); }
+	}
+
+	.profile-img {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	i{
+		padding-left:10px;
+	}
+	td {
+	  padding: 10px;
+	}
+	#about{
+		height:auto;
+		width:100%;
+		
+	}
+	#about-introduction{
+		position:relative;
+		top:60px;
+		background-color:#17202A ;
+		color:white;
+	}
+	#about-introduction-table{
+		
+		color:white;
+	}
+	#about-skills{
+		position:relative;
+		top:60px;
+		color:black;
+	}
+	
+	.progress {
+      position: relative;
+      background-color: #f5f5f5;
+      border-radius: 5px;
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+
+    .progress-bar {
+      height: 100%;
+      width: 0%;
+      background-color: black;
+      transition: width 1s ease;
+      position: relative;
+    }
+
+    .progress-label {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-weight: bold;
+    }
+
+    /* Animation */
+    @keyframes animateProgressBar {
+      from {
+        width: 0%;
+      }
+    }
+
+    /* Apply animation to progress bar */
+    .progress-bar.animated {
+      animation: animateProgressBar 2s forwards;
+    }
+
+    #about-education {
+      position:relative;
+	  top:60px;
+	  background-color: #17202A;
+      color: white;
+      transition: background-color 1s ease, color 1s ease;
+    }
+
+    #about-education.animate {
+      animation: animateEducationSection 1s forwards;
+    }
+
+    @keyframes animateEducationSection {
+      from {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Other styles */
+    .container {
+      padding: 20px;
+    }
+
+    .tokyo_section_title {
+      margin-bottom: 40px;
+    }
+
+    .tokyo_tm_resume_list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .tokyo_tm_resume_list li {
+      margin-bottom: 45px;
+    }
+
+    .time {
+      width: 50%;
+      padding-right: 20px;
+    }
+
+    .place {
+      width: 50%;
+      padding-left: 20px;
+    }
+
+    .inline-block {
+      display: inline-block;
+    }
+
+    .rounded-[50px] {
+      border-radius: 50px;
+    }
+
+    .text-[14px] {
+      font-size: 14px;
+    }
+
+    .text-[16px] {
+      font-size: 16px;
+    }
+
+    .font-semibold {
+      font-weight: 600;
+    }
+
+    .whitespace-nowrap {
+      white-space: nowrap;
+    }
+	#portfolio{
+		height:100%;
+		width:100%;
+		position:relative;
+		top:60px;
+	}
+	#portfolio-col{
+		padding:10px;
+	}
